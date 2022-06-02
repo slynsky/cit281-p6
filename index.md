@@ -1,7 +1,7 @@
 ## Project Purpose and Components
-This project was where students were asked to create their first server and practice using a code module.
+This project was a further exploration of classes, which also asked students to work on their debugging capabilities.
 
 ## What I Learned
-This project marked a really big step in this class. The point of this class was to gain experience with server-side javascript, and up until this point in the term it was something we had been slowly working towards, but had not quite dove into yet. It was really satisfying to do this project and feel like I was creating something. I felt like I had been well prepared by the preceding work, but it was still a nice challenge.
+It was really fun to do this project, because it reminded me of puzzles (my favorite hobby). It helped me understand classes better, and I felt accomplished when I was able to test and debug my code.
 
 ### [Home Page](https://slynsky.github.io)
