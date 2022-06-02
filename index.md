@@ -6,85 +6,85 @@ It was really fun to do this project, because it reminded me of puzzles (my favo
 
 ## Code
 ### p6.js
-class Shape {
-    constructor(sides = []) {
-        this.sides = sides;
-    }
-    perimeter = () => {
-        return (this.sides[0] !== undefined ? this.sides.reduce((previousValue, currentValue) => previousValue + currentValue): 0);
-    }
-}
+class Shape {<br>
+    constructor(sides = []) {<br>
+        this.sides = sides;<br>
+    }<br>
+    perimeter = () => {<br>
+        return (this.sides[0] !== undefined ? this.sides.reduce((previousValue, currentValue) => previousValue + currentValue): 0);<br>
+    }<br>
+}<br>
 
-/*
-console.log(new Shape([5, 10]).perimeter());  // 15
-console.log(new Shape([1, 2, 3, 4, 5]).perimeter()); // 15
-console.log(new Shape().perimeter()); // 0
-*/
-// Shape class works with tester code
+/*<br>
+console.log(new Shape([5, 10]).perimeter());  // 15<br>
+console.log(new Shape([1, 2, 3, 4, 5]).perimeter()); // 15<br>
+console.log(new Shape().perimeter()); // 0<br>
+*/<br>
+// Shape class works with tester code<br>
 
-class Rectangle extends Shape {
-    constructor(length=0, width=0) {
-        super([length, width, length, width]);
+class Rectangle extends Shape {<br>
+    constructor(length=0, width=0) {<br>
+        super([length, width, length, width]);<br>
 
-        this.length = length;
-        this.width = width;
-    }
-    area = () => {
-        return this.length*this.width
-    }
-}
+        this.length = length;<br>
+        this.width = width;<br>
+    }<br>
+    area = () => {<br>
+        return this.length*this.width<br>
+    }<br>
+}<br>
 
-/*
-console.log(new Rectangle(4, 4).perimeter());  // 16
-console.log(new Rectangle(4, 4).area());  // 16
-console.log(new Rectangle(5, 5).perimeter()); // 20
-console.log(new Rectangle(5, 5).area()); // 25
-console.log(new Rectangle().perimeter()); // 0
-console.log(new Rectangle().area()); // 0
-*/
-// Rectangle class works with tester code
+/*<br>
+console.log(new Rectangle(4, 4).perimeter());  // 16<br>
+console.log(new Rectangle(4, 4).area());  // 16<br>
+console.log(new Rectangle(5, 5).perimeter()); // 20<br>
+console.log(new Rectangle(5, 5).area()); // 25<br>
+console.log(new Rectangle().perimeter()); // 0<br>
+console.log(new Rectangle().area()); // 0<br>
+*/<br>
+// Rectangle class works with tester code<br>
 
-class Triangle extends Shape {
-    constructor (sideA=0, sideB=0, sideC=0) {
-        super([sideA, sideB, sideC]);
+class Triangle extends Shape {<br>
+    constructor (sideA=0, sideB=0, sideC=0) {<br>
+        super([sideA, sideB, sideC]);<br>
 
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideC = sideC;
-    }
-    area = () => {
-        let half = this.perimeter()/2;
-        //let rootExpression = ;
-        return (Math.sqrt(half*(half-this.sideA)*(half-this.sideB)*(half-this.sideC)));
-    }
-}
+        this.sideA = sideA;<br>
+        this.sideB = sideB;<br>
+        this.sideC = sideC;<br>
+    }<br>
+    area = () => {<br>
+        let half = this.perimeter()/2;<br>
+        //let rootExpression = ;<br>
+        return (Math.sqrt(half*(half-this.sideA)*(half-this.sideB)*(half-this.sideC)));<br>
+    }<br>
+}<br>
 
-/*
-console.log(new Triangle(3, 4, 5).perimeter());  // 12
-console.log(new Triangle(3, 4, 5).area());  // 6
-console.log(new Triangle().perimeter()); // 0
-console.log(new Triangle().area()); // 0
-*/
-// Triangle class works with tester code
+/*<br>
+console.log(new Triangle(3, 4, 5).perimeter());  // 12<br>
+console.log(new Triangle(3, 4, 5).area());  // 6<br>
+console.log(new Triangle().perimeter()); // 0<br>
+console.log(new Triangle().area()); // 0<br>
+*/<br>
+// Triangle class works with tester code<br>
 
-// Array of sides arrays
-const data = [ [3, 4], [5, 5], [3, 4, 5], [10], [] ];
+// Array of sides arrays<br>
+const data = [ [3, 4], [5, 5], [3, 4, 5], [10], [] ];<br>
 
-for (let sidesArray of data) {
-    let sides = sidesArray.length;
-    let sidesString = sidesArray.toString();
-    switch(sides) {
-        case 2:
-            let newRectangle = new Rectangle(...sidesArray)
-            console.log(newRectangle.length === newRectangle.width ? `Square with sides ${sidesString} has perimeter of ${newRectangle.perimeter()} and area of ${newRectangle.area()}` : `Rectangle with sides ${sidesString} has perimeter of ${newRectangle.perimeter()} and area of ${newRectangle.area()}`);
-            break;
-        case 3:
-            let newTriangle = new Triangle(...sidesArray)
-            console.log(`Triangle with sides ${sidesString} has perimeter of ${newTriangle.perimeter()} and area of ${newTriangle.area()}`);
-            break;
-        default:
-            console.log(sides === 1 ? `Shape with ${sides} side unsupported` : `Shape with ${sides} sides unsupported`)
-    }
-}
+for (let sidesArray of data) {<br>
+    let sides = sidesArray.length;<br>
+    let sidesString = sidesArray.toString();<br>
+    switch(sides) {<br>
+        case 2:<br>
+            let newRectangle = new Rectangle(...sidesArray)<br>
+            console.log(newRectangle.length === newRectangle.width ? `Square with sides ${sidesString} has perimeter of ${newRectangle.perimeter()} and area of ${newRectangle.area()}` : `Rectangle with sides ${sidesString} has perimeter of ${newRectangle.perimeter()} and area of ${newRectangle.area()}`);<br>
+            break;<br>
+        case 3:<br>
+            let newTriangle = new Triangle(...sidesArray)<br>
+            console.log(`Triangle with sides ${sidesString} has perimeter of ${newTriangle.perimeter()} and area of ${newTriangle.area()}`);<br>
+            break;<br>
+        default:<br>
+            console.log(sides === 1 ? `Shape with ${sides} side unsupported` : `Shape with ${sides} sides unsupported`)<br>
+    }<br>
+}<br>
 
 ### [Home Page](https://slynsky.github.io)
